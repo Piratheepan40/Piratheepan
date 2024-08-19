@@ -23,7 +23,9 @@ Route::get('/grades', function () {
   $grades = Grade::all();
   return view('grades.index', compact('grades'));
 });
+
 Route::get('/grade/{id}', function ($id) {
   $grades=Grade::find($id);
-  return view('grades.show',['grade'=>$grades]);
+  $students=Grade::find($id)->students;
+  return view('grades.show',compact('grades','students'));
 });
