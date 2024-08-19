@@ -19,6 +19,7 @@
             <th>Join Date</th>
             <th>Gender</th>
             <th>Designation</th>
+            <th>Address</th>
             <th>Created At</th>
             <th>Updated At</th>
             <th>Show</th>
@@ -33,6 +34,7 @@
                 <td>{{ $employee->join_date }}</td>
                 <td>{{ $employee->gender }}</td>
                 <td>{{ $employee->designation }}</td>
+                <td>{{ $employee->adreess }}</td>
                 <td>{{ $employee->created_at }}</td>
                 <td>{{ $employee->updated_at }}</td>
                 <td><a href="{{ url("/employee/$employee->id") }}">Show link</a></td>

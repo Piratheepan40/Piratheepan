@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Employee extends Model
+class Designation extends Model
 {
     use HasFactory;
-    public function designation()
+    public function employees()
     {
-        return $this->belongsTo(Designation::class);
+        return $this->hasMany(Employee::class);
     }
 }

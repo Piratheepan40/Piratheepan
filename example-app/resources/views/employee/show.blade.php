@@ -39,6 +39,10 @@
                 <td>{{ $employee->designation }}</td>
             </tr>
             <tr>
+                <td>Address</td>
+                <td>{{ $employee->designation->address }}</td>
+            </tr>
+            <tr>
                 <td>Created At</td>
                 <td>{{ $employee->created_at }}</td>
             </tr>
@@ -46,5 +50,6 @@
                 <td>Updated At</td>
                 <td>{{ $employee->updated_at }}</td>
             </tr>
+        </table>
 </body>
 </html>

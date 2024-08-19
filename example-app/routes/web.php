@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Employee;
+use App\Models\Designation;
 
 
 Route::get('/', function () {
@@ -19,3 +20,15 @@ Route::get('/employees', function () {
     $employee=Employee::find($id);
     return view('employee.show',['employee'=>$employee]);
   });
+
+  Route::get('/designations', function () {
+    $designations = Designation::all();
+    return view('designation.index', compact('designations'));
+});
+
+Route::get('/designation/{id}', function ($id) {
+    $designation=Designation::find($id);
+    return view('designation.show',['designation'=>$designation]);
+  });
+
+
