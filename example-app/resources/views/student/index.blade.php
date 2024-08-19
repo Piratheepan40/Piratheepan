@@ -12,6 +12,11 @@
             <th> Id</th>
             <th>First Nmae</th>
             <th>Last Name</th>
+            <th>Grade ID</th>
+            <th>Grade Name</th>
+            <th>Grade Color</th>
+            <th>Grade Group</th>
+            <th>Show</th>
             {{-- <th>Create at</th> --}}
             {{-- <th>Update </th> --}}
         </tr>
@@ -20,6 +25,10 @@
         <td> {{$student->id}}</td>
         <td> {{$student->first_name}}</td>
         <td> {{$student->last_name}}</td>
+        <td>{{$student->grade_id}}</td>
+        <td> {{$student->grade->grade_name}}</td>
+        <td> {{$student->grade->grade_color}}</td>
+        <td> {{$student->grade->grade_group}}</td>
         {{-- <td> {{$student->created_at}}</td>m
         <td> {{$student->updated_at}}</td> --}}
 

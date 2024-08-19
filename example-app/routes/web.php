@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Student;
+use App\Models\Grade;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,3 +18,12 @@ Route::get('/students', function () {
     $student=Student::find($id);
     return view('student.show',['student'=>$student]);
   });
+
+Route::get('/grades', function () {
+  $grades = Grade::all();
+  return view('grades.index', compact('grades'));
+});
+Route::get('/grade/{id}', function ($id) {
+  $grades=Grade::find($id);
+  return view('grades.show',['grade'=>$grades]);
+});
