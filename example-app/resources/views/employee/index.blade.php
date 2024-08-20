@@ -25,8 +25,8 @@
         </tr>
         @foreach ($employees as $employee)
             <tr>
-                <td>{{ $employee->id }}</td>
-                <td><a href="{{ url("/employee/$employee->id") }}">{{ $employee->first_name }}</a></td>
+                <td><a href="{{ url("/employee/$employee->id") }}">{{ $employee->id }}</a></td>
+                <td>{{ $employee->first_name }}</td>
                 <td>{{ $employee->last_name }}</td>
                 <td>{{ $employee->date_of_birth }}</td>
                 <td>{{ $employee->nic_number }}</td>
