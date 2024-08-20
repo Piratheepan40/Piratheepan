@@ -13,11 +13,9 @@ return new class extends Migration
     {
         Schema::create('designations', function (Blueprint $table) {
             $table->id();
-            $table->integer('age');
-            $table->string('address', length: 100);
-            $table->string('designation', length: 100);
-            $table->string('nic_number', length: 100);
-            $table->integer('salary');
+            $table->string('designation_name', length: 100);
+            $table->integer('salary_range');
+            $table->string('designation_department', length: 100);
             $table->timestamps();
         });
     }

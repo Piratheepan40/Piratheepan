@@ -26,9 +26,14 @@ Route::get('/employees', function () {
     return view('designation.index', compact('designations'));
 });
 
-Route::get('/designation/{id}', function ($id) {
+// Route::get('/designation/{id}', function ($id) {
+//     $designation=Designation::find($id);
+//     return view('designation.show',['designation'=>$designation]);
+//   });
+
+
+  Route::get('/designation/{id}', function ($id) {
     $designation=Designation::find($id);
-    return view('designation.show',['designation'=>$designation]);
+    $employees=Designation::find($id)->employees;
+    return view('designation.show',compact('designation','employees'));
   });
-
-

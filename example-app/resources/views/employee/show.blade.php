@@ -8,8 +8,9 @@
 </head>
 <body>
     <body>
+      <h1><a href="{{url('employees')}}">Employee List</a></h1>
         <table border="2">
-            <td><a href="{{url('employees')}}">Employee List</a></td>
+           
             <tr>
                 <td>First Name</td>
                 <td>{{$employee->first_name}}</td>
@@ -35,21 +36,31 @@
                 <td>{{ $employee->gender }}</td>
             </tr>
             <tr>
-                <td>Designation</td>
-                <td>{{ $employee->designation }}</td>
+                <td>Designation ID</td>
+                <td>{{ $employee->designation_id }}</td>
             </tr>
             <tr>
-                <td>Address</td>
-                <td>{{ $employee->designation->address }}</td>
+                <td>Designation Name</td>
+                <td>{{ $employee->designation->designation_name }}</td>
             </tr>
             <tr>
+                <td>Designation Department</td>
+                <td>{{ $employee->designation->designation_department }}</td>
+            </tr>
+            <tr>
+                <td>Salary Range</td>
+                <td>{{ $employee->designation->salary_range }}</td>
+            </tr>
+    
+
+            {{-- <tr>
                 <td>Created At</td>
                 <td>{{ $employee->created_at }}</td>
             </tr>
             <tr>
                 <td>Updated At</td>
                 <td>{{ $employee->updated_at }}</td>
-            </tr>
+            </tr> --}}
         </table>
 </body>
 </html>

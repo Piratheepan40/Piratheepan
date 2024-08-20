@@ -7,30 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <body>
-        <table border="1">
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Designation Name</th>
+            <th>Designation Department</th>
+            <th>Salary Range</th>
+
+        </tr>
+        @foreach ($designations as $designation)
             <tr>
-                <th> Id</th>
-                <th>Age</th>
-                <th>Address</th>
-                <th>Designation</th>
-                <th>NIC</th>
-                <th>Salary</th>
-                <th>Show</th>
+                <td><a href="{{ url("/designation/{$designation->id}") }}">{{ $designation->id }}</a></td>
+                <td>{{ $designation->designation_name}}</td>
+                <td>{{ $designation->designation_department }}</td>
+                <td>{{ $designation->salary_range }}</td>
+                
             </tr>
-            @foreach ($designations as $designation)
-                <tr>
-                    <td>{{ $designation->id }}</td>
-                    <td>{{ $designation->age }}</td>
-                    <td>{{ $designation->address }}</td>
-                    <td>{{ $designation->designation }}</td>
-                    <td>{{ $designation->nic_number }}</td>
-                    <td>{{ $designation->salary }}</td>
-                    
-                   
-                    <td><a href="{{ url("/designation/$designation->id") }}">Show link</a></td>
-                </tr>
-            @endforeach
-        </table>
+        @endforeach
+    </table>
 </body>
 </html>

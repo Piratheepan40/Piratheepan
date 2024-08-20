@@ -18,26 +18,24 @@
             <th>NIC</th>
             <th>Join Date</th>
             <th>Gender</th>
-            <th>Designation</th>
-            <th>Address</th>
-            <th>Created At</th>
-            <th>Updated At</th>
-            <th>Show</th>
+            <th>Designation ID</th>
+            <th>Designation Name</th>
+            <th>Designation Department</th>
+            <th>Salary Range</th>
         </tr>
         @foreach ($employees as $employee)
             <tr>
                 <td>{{ $employee->id }}</td>
-                <td>{{ $employee->first_name }}</td>
+                <td><a href="{{ url("/employee/$employee->id") }}">{{ $employee->first_name }}</a></td>
                 <td>{{ $employee->last_name }}</td>
                 <td>{{ $employee->date_of_birth }}</td>
                 <td>{{ $employee->nic_number }}</td>
                 <td>{{ $employee->join_date }}</td>
                 <td>{{ $employee->gender }}</td>
-                <td>{{ $employee->designation }}</td>
-                <td>{{ $employee->adreess }}</td>
-                <td>{{ $employee->created_at }}</td>
-                <td>{{ $employee->updated_at }}</td>
-                <td><a href="{{ url("/employee/$employee->id") }}">Show link</a></td>
+                <td>{{ $employee->designation_id}}</td>
+                <td><a href="{{ url("/designation/$employee->designation_id") }}">{{ $employee->designation->designation_name}}</a></td>
+                <td>{{ $employee->designation->designation_department}}</td>
+                <td>{{ $employee->designation->salary_range}}</td>
             </tr>
         @endforeach
     </table>
