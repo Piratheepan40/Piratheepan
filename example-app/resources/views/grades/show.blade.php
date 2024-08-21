@@ -33,9 +33,16 @@
                 <td>{{ $student->grade->grade_name }}</td>
                 <td>{{ $student->grade->grade_color }}</td>
                 <td>{{ $student->grade->grade_group }}</td>
-
             </tr>
-        @endforeach
+         @endforeach
+    </table><br>
+    <table border="2">
+        <tr>
+      <th>Common Subject</th>
+      <td>@foreach ($grades->subjects as $subject)
+        {{$subject->subject_name}}
+        @endforeach </td>
+        </tr>
     </table>
 </body>
 

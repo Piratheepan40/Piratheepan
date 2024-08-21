@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Student;
-use App\Models\Subject;
+use App\Models\Grade;
 
-class Grade extends Model
+class Subject extends Model
 {
     use HasFactory;
     public function students()
     {
-        return $this->hasMany(Student::class);
+        return $this->belongsToMany(Student::class);
     }
-    public function subjects()
+    public function grades()
     {
-        return $this->belongsToMany(Subject::class);
+        return $this->belongsToMany(Grade::class);
     }
 }

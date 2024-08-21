@@ -18,7 +18,8 @@
             <th>Grade Name</th>
             <th>Grade Color</th>
             <th>Grade Group</th>
-
+           
+            {{-- <th>Subject Name</th> --}}
             {{-- <th>Create at</th> --}}
             {{-- <th>Update </th> --}}
         </tr>
@@ -31,9 +32,8 @@
                 <td> <a href="{{ url("/grade/$student->grade_id") }}">{{ $student->grade->grade_name }}</td>
                 <td> {{ $student->grade->grade_color }}</td>
                 <td> {{ $student->grade->grade_group }}</td>
-                {{-- <td> {{$student->created_at}}</td>m
-        <td> {{$student->updated_at}}</td> --}}
-
+            
+                
             </tr>
         @endforeach
     </table>

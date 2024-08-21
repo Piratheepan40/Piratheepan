@@ -36,7 +36,18 @@
             <td>Grade Group</td>
             <td>{{ $student->grade->grade_group }}</td>
         </tr>
-
+        {{-- <tr>
+            <td>Subject Name</td>
+            <td>{{ $student->subject_name }}</td>
+        </tr> --}}
+    </table><br>
+    <table border="2">
+        <tr>
+            <th> Common Subject </th>
+            <td> @foreach ($student->subjects as $subject)
+                {{$subject->subject_name}}
+                @endforeach</td>
+        </tr>
     </table>
 </body>
 

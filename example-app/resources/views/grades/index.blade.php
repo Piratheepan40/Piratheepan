@@ -25,6 +25,7 @@
                 <td>{{ $grade->grade_order }}</td>
                 <td>{{ $grade->grade_color }}</td>
                 <td>{{ $grade->grade_group }}</td>
+                
                 <td><a href="{{ url("/grade/{$grade->id}") }}">Show link</a></td>
             </tr>
         @endforeach
