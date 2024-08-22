@@ -12,6 +12,30 @@
     <h2><a href="{{ url('grades') }}">Grade List</a></h2>
 
     <h2><a href="{{ url('students') }}">Student List</a></h2>
+
+
+    <h3>Grade Details</h3>
+    {{-- <table border="2">
+        <tr>
+            <td>Grade ID</td>
+            <td>{{ $student->grade_id}}</td>
+        </tr>
+        <tr>
+            <td>Grade Name</td>
+            <td>{{ $grade->grade_name }}</td>
+        </tr>
+        <tr>
+            <td>Grade Order</td>
+            <td>{{ $grade->grade_order }}</td>
+        </tr>
+        <tr>
+            <td>Subject Color</td>
+            <td>{{ $grade->grade_color }}</td>
+        </tr>
+    </table> --}}
+
+
+
     <table border="2">
 
         <tr>
