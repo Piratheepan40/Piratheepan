@@ -37,39 +37,40 @@
             <th>Last Name</th>
             <th>Grade ID</th>
             <th>Grade Name</th>
-            <th>Subject Name</th>
-            <th>Subject Order</th>
-            <th>Subject Color</th>
         </tr>
         @foreach ($students as $student)
             <tr>
                 <td>{{ $student->first_name }}</td>
                 <td>{{ $student->last_name }}</td>
                 <td>{{ $student->grade_id }}</td>
-                <td>{{ $student->grade->grade_name }}</td>
-                <td>{{ $subject->subject_name }}</td>
-                <td>{{ $subject->subject_order }}</td>
-                <td>{{ $subject->subject_color }}</td>
+                <td>{{ $student->grade->grade_name }}</td>          
             </tr>
         @endforeach
     </table>
 
     <br>
 
-    <h3>Subject Class Details</h3>
+    <h3>Subject Grade Details</h3>
     <table border="2">
         <tr>
             {{-- <th>Grade ID</th> --}}
+            <th>Grade ID</th>
             <th>Grade Name</th>
+            <th>Grade Color</th>
+            <th>Grade Group</th>
             {{-- <th>Subject ID</th> --}}
-            <th>Subject Name</th>
+           
         </tr>
         @foreach ($students as $student)
             <tr>
                 {{-- <td>{{ $student->grade_id }}</td> --}}
+                
+                <td>{{ $student->grade_id }}</td>
                 <td>{{ $student->grade->grade_name }}</td>
+                <td>{{ $student->grade->grade_color }}</td>
+                <td>{{ $student->grade->grade_group }}</td>
                 {{-- <td>{{ $subject->id }}</td>  --}}
-                <td>{{ $subject->subject_name }}</td>
+             
             </tr>
         @endforeach
     </table>

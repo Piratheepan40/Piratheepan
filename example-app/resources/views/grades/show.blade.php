@@ -12,62 +12,63 @@
     <h2><a href="{{ url('grades') }}">Grade List</a></h2>
 
     <h2><a href="{{ url('students') }}">Student List</a></h2>
-
-
     <h3>Grade Details</h3>
-    {{-- <table border="2">
-        <tr>
-            <td>Grade ID</td>
-            <td>{{ $student->grade_id}}</td>
-        </tr>
-        <tr>
-            <td>Grade Name</td>
-            <td>{{ $grade->grade_name }}</td>
-        </tr>
-        <tr>
-            <td>Grade Order</td>
-            <td>{{ $grade->grade_order }}</td>
-        </tr>
-        <tr>
-            <td>Subject Color</td>
-            <td>{{ $grade->grade_color }}</td>
-        </tr>
-    </table> --}}
+        <table border="2">
+            <tr>
+                <th>Grade ID</th>
+                <th>Grade Name</th>
+                <th>Grade Color</th>
+                <th>Grade Group</th>
 
+            </tr>
+        @foreach ($students as $student)
+            <tr>
+            
+                <td>{{ $student->grade_id }}</td>
+                <td>{{ $student->grade->grade_name }}</td>
+                <td>{{ $student->grade->grade_color }}</td>
+                <td>{{ $student->grade->grade_group }}</td>
+            </tr>
+        @endforeach
+    </table><br>
 
-
+    <h3>Subject Details</h3>
     <table border="2">
+        <thead>
+            <tr>
+                <th>Subject ID</th>
+                <th>Subject Name</th>
+                <th>Subject Order</th>
+                <th>Subject Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($grades->subjects as $subject)
+                <tr>
+                    <td>{{ $subject->id }}</td>
+                    <td>{{ $subject->subject_name }}</td>
+                    <td>{{ $subject->subject_order }}</td>
+                    <td>{{ $subject->subject_color }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+    <br>
 
+    <h3>Student Details</h3>
+    <table border="2">
         <tr>
-            <th> Id</th>
+            <th>Student ID</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Grade ID</th>
-            <th>Grade Name</th>
-            <th>Grade Color</th>
-            <th>Grade Group</th>
-
         </tr>
         @foreach ($students as $student)
             <tr>
                 <td>{{ $student->id }}</td>
                 <td>{{ $student->first_name }}</td>
                 <td>{{ $student->last_name }}</td>
-                <td>{{ $student->grade_id }}</td>
-                <td>{{ $student->grade->grade_name }}</td>
-                <td>{{ $student->grade->grade_color }}</td>
-                <td>{{ $student->grade->grade_group }}</td>
-            </tr>
-         @endforeach
-    </table><br>
-    <table border="2">
-        <tr>
-      <th>Common Subject</th>
-      <td>@foreach ($grades->subjects as $subject)
-        {{$subject->subject_name}}
-        @endforeach </td>
-        </tr>
+        @endforeach
     </table>
+    <br>
 </body>
-
 </html>
