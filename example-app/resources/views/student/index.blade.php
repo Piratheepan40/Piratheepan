@@ -26,10 +26,10 @@
         @foreach ($students as $student)
             <tr>
                 <td>  <a href="{{ url("/student/$student->id") }}">{{ $student->id }}</a></td>
-                <td>{{ $student->first_name }}</td>
+                <td> <a href="{{ url("/student/$student->id") }}">{{ $student->first_name }}</a></td>
                 <td> {{ $student->last_name }}</td>
                 <td>{{ $student->grade_id }}</td>
-                <td> <a href="{{ url("/grade/$student->grade_id") }}">{{ $student->grade->grade_name }}</td>
+                <td> <a href="{{ url("/grade/$student->grade_id") }}">{{ $student->grade->grade_name }}</a></td>
                 <td> {{ $student->grade->grade_color }}</td>
                 <td> {{ $student->grade->grade_group }}</td>
             

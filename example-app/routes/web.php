@@ -13,9 +13,6 @@ Route::get('/', function () {
 
  Route::get('/students', function () {
     $students=Student::all();
-    // // $students = DB::table('students')->get();
-    // $students = DB::raw("select*from*student")->get();
-    // dd($student);
     return view ('student.index', compact('students'));
  });
 
