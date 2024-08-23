@@ -13,7 +13,7 @@
     
     <h3><a href="{{ url('subjects') }}">Subject List</a></h3>
 
-    <!-- Subject Details -->
+
     <h3>{{$subject->subject_name}} Subject Details</h3>
     <table border="2">
         <tr>
@@ -33,7 +33,7 @@
             <td>{{ $subject->subject_color }}</td>
         </tr>
     </table>
-
+    
     <h3>Students Enrolled in this Subject</h3>
     <table border="2">
         <tr>
@@ -68,13 +68,11 @@
         @foreach ($students as $student)
             <tr>
                 {{-- <td>{{ $student->grade_id }}</td> --}}
-                
                 <td>{{ $student->grade_id }}</td>
                 <td><a href="{{ url("/grade/$student->grade_id") }}">{{ $student->grade->grade_name }}</td>
                 <td>{{ $student->grade->grade_color }}</td>
                 <td>{{ $student->grade->grade_group }}</td>
                 {{-- <td>{{ $subject->id }}</td>  --}}
-             
             </tr>
         @endforeach
     </table>

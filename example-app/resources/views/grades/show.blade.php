@@ -26,7 +26,6 @@
             </tr>
         @foreach ($students as $student)
             <tr>
-            
                 <td>{{ $student->grade_id }}</td>
                 <td>{{ $student->grade->grade_name }}</td>
                 <td>{{ $student->grade->grade_color }}</td>

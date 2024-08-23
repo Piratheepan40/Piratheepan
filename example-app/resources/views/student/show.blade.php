@@ -37,11 +37,8 @@
             <td>Grade Group</td>
             <td>{{ $student->grade->grade_group }}</td>
         </tr>
-        {{-- <tr>
-            <td>Subject Name</td>
-            <td>{{ $student->subject_name }}</td>
-        </tr> --}}
     </table><br>
+    
     <table border="2">
         <tr>
             <th> Subject </th>
