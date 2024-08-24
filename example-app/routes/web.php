@@ -1,22 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Student;
-use App\Models\Grade;
-use App\Models\Subject;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\SubjectController;
-use App\Http\Controllers\GradeController;
+// use App\Models\Student;
+// use App\Models\Grade;
+// use App\Models\Subject;
+// use App\Http\Controllers\StudentController;
+// use App\Http\Controllers\SubjectController;
+// use App\Http\Controllers\GradeController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('students',[StudentController::class, 'index']);
-Route::resource('students', StudentController::class);  
+Route::get('/{page?}',function ($page='index'){
+    return view('pages.' .$page);
+});
 
-Route::resource('subjects', SubjectController::class);  
-Route::resource('grades', GradeController::class);  
+// // Route::get('students',[StudentController::class, 'index']);
+// Route::resource('students', StudentController::class);  
+
+// Route::resource('subjects', SubjectController::class);  
+// Route::resource('grades', GradeController::class);  
 
 
 
