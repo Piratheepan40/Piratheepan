@@ -34,7 +34,7 @@
         @foreach ($subjects as $subject)
             <tr>
                 <td>{{ $subject->id }}</td>
-                <td><a href="{{ url('subject', $subject->id) }}">{{ $subject->subject_name }}</a></td>
+                <td><a href="{{ url('subjects', $subject->id) }}">{{ $subject->subject_name }}</a></td>
                 <td>{{ $subject->subject_order }}</td>
                 <td>{{ $subject->subject_color }}</td>
             </tr>

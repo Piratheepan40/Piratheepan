@@ -36,7 +36,7 @@
         @foreach ($grades as $grade)
             <tr>
                 <td>{{ $grade->id }}</td>
-                <td><a href="{{ url("/grade/{$grade->id}") }}">{{ $grade->grade_name }}</a></td>
+                <td><a href="{{ url("/grades/{$grade->id}") }}">{{ $grade->grade_name }}</a></td>
                 <td>{{ $grade->grade_order }}</td>
                 <td>{{ $grade->grade_color }}</td>
                 <td>{{ $grade->grade_group }}</td>

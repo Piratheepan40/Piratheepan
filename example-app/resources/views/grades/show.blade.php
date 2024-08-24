@@ -48,7 +48,7 @@
             @foreach ($grades->subjects as $subject)
                 <tr>
                     <td>{{ $subject->id }}</td>
-                    <td> <a href="{{ url("/subject/$subject->id") }}">{{ $subject->subject_name }}</a></td>
+                    <td> <a href="{{ url("/subjects/$subject->id") }}">{{ $subject->subject_name }}</a></td>
                     <td>{{ $subject->subject_order }}</td>
                     <td>{{ $subject->subject_color }}</td>
                 </tr>
@@ -67,7 +67,7 @@
         @foreach ($students as $student)
             <tr>
                 <td>{{ $student->id }}</td>
-                <td> <a href="{{ url("/student/$student->id") }}">{{ $student->first_name }}</a></td>
+                <td> <a href="{{ url("/students/$student->id") }}">{{ $student->first_name }}</a></td>
                 <td>{{ $student->last_name }}</td>
         @endforeach
     </table>
