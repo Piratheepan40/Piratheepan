@@ -2,4 +2,3 @@
 $(document).ready(function() {
   $('#dataTable').DataTable();
 });
-console.log("Datatables Simple Demo loaded");
