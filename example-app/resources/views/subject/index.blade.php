@@ -8,10 +8,10 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tables</h1>
+                        <h1 class="mt-4">Subject</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item active">Subject</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
@@ -29,28 +29,30 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Grade Name</th>
-                                           
+                                            <th>Subject ID</th>
+                                            <th>Subject Name</th>
+                                            <th>Subject Order</th>
+                                            <th>Subject Color</th>
+                                            <th>SHow</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Grade Name</th>
+                                            <th>Subject ID</th>
+                                            <th>Subject Name</th>
+                                            <th>Subject Order</th>
+                                            <th>Subject Color</th>
+                                            <th>Show</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        @foreach ($students as $student)
+                                        @foreach ($subjects as $subject)
                                         <tr>
-                                            <td>{{$student->id}}</td>
-                                            <td>{{$student->first_name}}</td>
-                                            <td>{{$student->last_name}}</td>
-                                            <td>{{$student->grade->grade_name}}</td>
+                                            <td>{{$subject->id}}</td>
+                                            <td>{{$subject->subject_name}}</td>
+                                            <td>{{$subject->subject_order}}</td>
+                                            <td>{{$subject->color}}</td>
+                                            <td><a href="{{ url('subjects', $subject->id) }}">Show</a></td>
                                         </tr>
                                         @endforeach
                                     </tbody>

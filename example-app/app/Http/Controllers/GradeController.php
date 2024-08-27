@@ -3,19 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Student;
-
-class StudentController extends Controller
-
-
+use App\Models\Grade;
+class GradeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $students=Student::all();
-        return view ('student.index' ,compact('students'));
+        $grades = Grade::all();
+          return view('grade.index', compact('grades'));
     }
 
     /**
@@ -39,9 +36,10 @@ class StudentController extends Controller
      */
     public function show(string $id)
     {
-        $student=Student::find($id);
-
-        return view('student.show',compact('student'));
+          $grade=Grade::find($id);
+          $students=Grade::find($id)->students;
+          
+          return view('grade.show',compact('grade','students',));
     }
 
     /**

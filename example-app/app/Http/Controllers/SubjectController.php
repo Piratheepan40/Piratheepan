@@ -3,19 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Student;
-
-class StudentController extends Controller
-
-
+use App\Models\Subject;
+class SubjectController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $students=Student::all();
-        return view ('student.index' ,compact('students'));
+        $subjects=Subject::all();
+        return view ('subject.index', compact('subjects'));
     }
 
     /**
@@ -39,9 +36,9 @@ class StudentController extends Controller
      */
     public function show(string $id)
     {
-        $student=Student::find($id);
-
-        return view('student.show',compact('student'));
+        $subject = Subject::find($id);
+         $students =Subject::find($id)->students;
+        return view('subject.show', compact('subject', 'students'));
     }
 
     /**

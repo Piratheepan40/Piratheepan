@@ -8,10 +8,10 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tables</h1>
+                        <h1 class="mt-4">Grade</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item active">Grade</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
@@ -29,28 +29,33 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
+                                            <th>Grade ID</th>
                                             <th>Grade Name</th>
-                                           
+                                            <th>Grade Group</th>
+                                            <th>Grade Order</th>
+                                            <th>Grade Color</th>
+                                            <th>Show</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
+                                            <th>Grade ID</th>
                                             <th>Grade Name</th>
+                                            <th>Grade Group</th>
+                                            <th>Grade Order</th>
+                                            <th>Grade Color</th>
+                                            <th>Show</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        @foreach ($students as $student)
+                                        @foreach ($grades as $grade)
                                         <tr>
-                                            <td>{{$student->id}}</td>
-                                            <td>{{$student->first_name}}</td>
-                                            <td>{{$student->last_name}}</td>
-                                            <td>{{$student->grade->grade_name}}</td>
+                                            <td>{{$grade->id}}</td>
+                                           <td>{{ $grade->grade_name }}</td>
+                                            <td>{{$grade->grade_group}}</td>
+                                            <td>{{$grade->grade_order}}</td>
+                                            <td>{{$grade->grade_color}}</td>
+                                            <td><a href="{{ url("/grades/{$grade->id}") }}">Show</a></td>
                                         </tr>
                                         @endforeach
                                     </tbody>

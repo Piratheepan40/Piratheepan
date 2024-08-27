@@ -2,14 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Student;
-// use App\Models\Grade;
-// use App\Models\Subject;
 use App\Http\Controllers\StudentController;
-// use App\Http\Controllers\SubjectController;
-// use App\Http\Controllers\GradeController;
+use App\Models\Grade;
+use App\Models\Subject;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\GradeController;
 
 
-Route::get('/{p}',[StudentController::class, 'index']);
+// Route::get('/{a}',[StudentController::class, 'index']);
 
 
 
@@ -29,16 +29,28 @@ Route::get('/{p}',[StudentController::class, 'index']);
 //     return view('pages.tables' ,compact('students'));
 // });
 
-// // Route::get('/{page?}',function ($page='index'){
-// //     return view('pages.' .$page);
-// // });
+
+
+
+
 
  
-//Route::resource('students', StudentController::class);  
+Route::resource('students', StudentController::class);  
 
-// Route::resource('subjects', SubjectController::class);  
-// Route::resource('grades', GradeController::class);  
+Route::resource('subjects', SubjectController::class);  
+Route::resource('grades', GradeController::class);  
 
+
+Route::get('/', function () {
+    $students =student:: all();
+    return view('pages.index',compact('students'));
+});
+
+
+
+// Route::get('/{page?}',function ($page='index'){
+//     return view('pages.' .$page);
+// });
 
 
 
