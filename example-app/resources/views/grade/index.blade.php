@@ -55,7 +55,11 @@
                                             <td>{{$grade->grade_group}}</td>
                                             <td>{{$grade->grade_order}}</td>
                                             <td>{{$grade->grade_color}}</td>
-                                            <td><a href="{{ url("/grades/{$grade->id}") }}">Show</a></td>
+                                            <td>
+                                                <button type="button" onclick="location.href='{{ url('/grades/' . $grade->id) }}'" class="btn btn-primary">
+                                                    Show
+                                                </button>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

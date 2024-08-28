@@ -12,7 +12,7 @@
                         <h1 class="mt-4">Student</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Grade Tables</li>
+                            <li class="breadcrumb-item active"><a href="{{ url('students') }}">Student Tables</a></li>
                         </ol>
 
                         <div class="card">
@@ -67,7 +67,7 @@
                                                 <td>{{ $subject->id }}</td>
                                                 <td>{{ $subject->subject_name }}</td>
                                                 <td>{{ $subject->subject_order }}</td>
-                                                <td>{{ $subject->subject_color }}</td>
+                                                <td>{{ $subject->color }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>

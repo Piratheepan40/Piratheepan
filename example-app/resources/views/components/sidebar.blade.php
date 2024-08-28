@@ -2,24 +2,25 @@
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
                 <div class="nav">
-                    <div class="sb-sidenav-menu-heading">Core</div>
+                    <div class="sb-sidenav-menu-heading"></div>
                     <a class="nav-link" href="/">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
                     <a class="nav-link" href="/students">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-user-graduate"></i></div>
                         Student
                     </a>
                     <a class="nav-link" href="/grades">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
                         Grade
                     </a>
                     <a class="nav-link" href="/subjects">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                         Subject
                     </a>
-                    <div class="sb-sidenav-menu-heading">Interface</div>
+                    
+                    {{-- <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                         Layouts
@@ -70,7 +71,7 @@
                     <a class="nav-link" href="/tables">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Tables
-                    </a>
+                    </a> --}}
                 </div>
             </div>
             <div class="sb-sidenav-footer">

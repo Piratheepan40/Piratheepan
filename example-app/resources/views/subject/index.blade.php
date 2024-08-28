@@ -33,7 +33,7 @@
                                             <th>Subject Name</th>
                                             <th>Subject Order</th>
                                             <th>Subject Color</th>
-                                            <th>SHow</th>
+                                            <th>Show</th>
                                         </tr>
                                     </thead>
                                     <tfoot>

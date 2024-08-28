@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Subject;
+use App\Models\Student;
+use App\Models\Grade;
 class SubjectController extends Controller
 {
     /**
@@ -11,8 +13,12 @@ class SubjectController extends Controller
      */
     public function index()
     {
+        $student_count = Student::all () ->count();
+        $grade_count = Grade::all () ->count();
+        $subject_count = Subject::all () ->count();
+
         $subjects=Subject::all();
-        return view ('subject.index', compact('subjects'));
+        return view ('subject.index', compact('subjects','student_count','grade_count','subject_count'));
     }
 
     /**

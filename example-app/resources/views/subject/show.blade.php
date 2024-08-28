@@ -11,7 +11,7 @@
                         <h1 class="mt-4">Subject</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Grade Tables</li>
+                            <li class="breadcrumb-item active"><a href="{{ url('subjects') }}">Subject Tables</a></li>
                         </ol>
                        
                         <div class="card">
@@ -41,7 +41,7 @@
                                         </tr>
                                         <tr>
                                             <td>Subject Color</td>
-                                            <td>{{ $subject->subject_color }}</td>
+                                            <td>{{ $subject->color }}</td>
                                         </tr>
                                     </tbody>
                                 </table>
