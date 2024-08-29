@@ -16,8 +16,8 @@
                        
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="mb-0">{{$subject->subject_name}}  Details</h3>
-                            </div>
+                                <h3 class="mb-0"><span style="color: {{$subject->color}};">{{$subject->subject_name}}</span> Details</h3>
+                            </div>                            
                             <div class="card-body">
                                 <table id="datatablesSimple" class="table table-striped table-bordered">
                                     <thead>

@@ -16,7 +16,7 @@
                        
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="mb-0">{{$grade->grade_name}} Grade Details</h3>
+                                <h3 class="mb-0" > <span style="color: {{$grade->grade_color}};">{{$grade->grade_name}}</span> Details</h3>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple" class="table table-striped table-bordered">
