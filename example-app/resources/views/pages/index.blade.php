@@ -1,41 +1,35 @@
-<x-layout>
-    <body class="sb-nav-fixed">
-     <x-nav/>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-               <x-sidebar/>
-            </div>
-            <div id="layoutSidenav_content">
+
+           <x-layout>
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
+                        <h1 class="mt-4" style="color: orange">Dashboard</h1>
+                        {{-- <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
+                        </ol> --}}
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Students:{{$student_count}}</div>
+                                    <div class="card-body">Primary Card</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/students">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Subject:{{$subject_count}}</div>
+                                    <div class="card-body">Warning Card</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/subjects">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Grade:{{$grade_count}}</div>
+                                    <div class="card-body">Success Card</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/grades">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -44,7 +38,7 @@
                                 <div class="card bg-danger text-white mb-4">
                                     <div class="card-body">Danger Card</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -70,47 +64,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                DataTable Example
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Grade Name</th>
-                                           
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Grade Name</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        @foreach ($students as $student)
-                                        <tr>
-                                            <td>{{$student->id}}</td>
-                                            <td>{{$student->first_name}}</td>
-                                            <td>{{$student->last_name}}</td>
-                                            <td>{{$student->grade->grade_name}}</td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
                     </div>
                 </main>
-               <x-footer />
-            </div>
-        </div>
-    </body>
-</x-layout>
+            </x-layout> 

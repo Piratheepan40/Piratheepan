@@ -19,8 +19,8 @@ class StudentController extends Controller
         $grade_count = Grade::all () ->count();
         $subject_count = Subject::all () ->count();
 
-        $students=Student::all();
-        return view ('student.index' ,compact('students','student_count','grade_count','subject_count'));
+        $students=Student::paginate(10);
+        return view ('pages.student.index' ,compact('students','student_count','grade_count','subject_count'));
     }
 
     /**
@@ -46,7 +46,7 @@ class StudentController extends Controller
     {
         $student=Student::find($id);
         
-        return view('student.show',compact('student'));
+        return view('pages.student.show',compact('student'));
     }
 
     /**
