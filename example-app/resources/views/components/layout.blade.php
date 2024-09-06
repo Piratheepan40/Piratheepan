@@ -10,15 +10,12 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        @vite( ['ressource/js/scripts.js','resources/css/app.css', 'resources/js/app.js' ,'public/css/styles.css',
-                'resources/assets/demo/chart-area-demo.js','resources/assets/demo/chart-bar-demo.js',
-                'resources/assets/demo/chart-pie-demo.js','resources/assets/demo/datatables-demo.js',
-                'public/js/datatables-simple-demo.js'])
+        @vite( ['resources/css/app.css','resources/js/app.js'])
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <div ><img src="{{ Vite::asset('resources/image/OIP.jpeg') }}" alt="" style="width: 50px;height:50px"></div>
-            <a class="navbar-brand ps-3" href="index.html" style="pading:0">Chava Hindu College</a>
+            <a class="navbar-brand ps-3" href="/" style="pading:0"><b >Chava Hindu College</b></a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -29,17 +26,7 @@
                 </div>
             </form>
             <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
+            
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -48,20 +35,20 @@
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link" href="/">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt" style="color: aliceblue;"></i></div>
+                                <b style="color: aliceblue;">Dashboard</b>
                             </a>
                             <a class="nav-link" href="/students">
-                                <div class="sb-nav-link-icon"><i class="bi bi-person-circle"></i></div>
-                                Students
+                                <div class="sb-nav-link-icon"><i class="bi bi-person-circle" style="color: aliceblue;"></i></div>
+                                <b style="color: aliceblue;">Students</b>
                             </a>
                             <a class="nav-link" href="/grades">
-                                <div class="sb-nav-link-icon"><i class="bi bi-mortarboard"></i></div>
-                                Grades
+                                <div class="sb-nav-link-icon"><i class="bi bi-mortarboard" style="color: aliceblue;"></i></div>
+                                <b style="color: aliceblue;">Grades</b>
                             </a>
                             <a class="nav-link" href="/subjects">
-                                <div class="sb-nav-link-icon"><i class="bi bi-book"></i></div>
-                                Subjects
+                                <div class="sb-nav-link-icon"><i class="bi bi-book" style="color: aliceblue;"></i></div>
+                                <b style="color: aliceblue;">Subjects</b>
                             </a>
 
                         </div>
@@ -69,12 +56,12 @@
                     
                 </nav>
             </div>
-            <div id="layoutSidenav_content" style="background-color: #2d303b">
+            <div id="layoutSidenav_content" style="background-color: #394046" >
             {{$slot}}
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
+            <footer class="py-4 text-white" style="background: #24272b;">
+                <div class="container-fluid px-4" >
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                        <div class="text-muted">Copyright &copy; Chava Hindu 2024</div>
                         <div>
                             <a href="#">Privacy Policy</a>
                             &middot;

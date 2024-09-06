@@ -1,53 +1,56 @@
 <x-layout>
-    <h1 class="mt-4" style="color:orange">Student Detail  </h1>
-    <div class="row">
-                 <div class="col-xl-6">
-                     <div class="card mb-4" style="margin:10px">
-                         <div class="card-header">
-                         <i class="bi bi-person-circle"></i>
-                           Student's Information
-                         </div>
-                         <div class="card-body">
-                            <div><img src="" alt=""></div>
-                            <table>
-                                <tr>
-                                    <td colspan="4">
-                                        <div style="width: 120px;height:120px;border-radius: 600px;background-color:aqua">
-                                            <img src="{{ Vite::asset('resources/image/student.png') }}"  style="width:100%;height:100%;object-fit:cover" class="card-img-center" alt="{{$student->first_name}}">
-                                        </div>
-                                    </td>
-                                    <td style="padding-left:100px ">
-                                        <p>ID&emsp;&emsp;&emsp;<b>{{$student->id}}</b></p>
-                                        <p>Name &emsp; <b>{{$student->first_name}}{{$student->last_name}}</b></p>
-                                        <p>Grade  &emsp;<b>{{$student->grade->grade_name}}</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-xl-6">
-                     <div class="card mb-4" style="margin: 10px">
-                         <div class="card-header">
-                         <i class="bi bi-book"></i>
-                             Student's Subjects
-                         </div>
-                         <div class="card-body">
-                            @if(count($student->subjects)<=0)
-                            <h3 style="text-align:center">No Data!</h3>
-                            @endif
-                            @foreach ($student->subjects as $subject)
-                                <div class="card mb-4" style="margin-right:10px 10px;box-shadow:1px 1px 20px #111111;border-radius:20px">
-                                <a href="/subject/{{$subject->id}}" class="student-list" style="text-decoration: none">
-                                <div class="card-body">
-                                    <li class="list-group-item"><b>{{$subject->subject_name}}</b></li>
-                                </div>
+    <div class="container-fluid px-4 pt-4">
+        <h3 class="mb-0" style="color: aliceblue">{{ $student->last_name }}'S Details</h3>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+            <li class="breadcrumb-item active"><a href="{{ url('students') }}">Student Tables</a></li>
+            
+        </ol>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4" style="background-color:#374259;border-radius:20px;">
+                    <div class="card-header">
+                        <i class="bi bi-person-circle" style="color: aliceblue;"></i>
+                        <b style="color: aliceblue;">Student's Information</b>
+                    </div>
+                    <div class="card-body" style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; background-color: aqua; margin-bottom: 20px">
+                            <img src="{{ Vite::asset('resources/image/student.png') }}" 
+                                 style="width:100%;height:100%;object-fit:cover"
+                                 class="card-img-center" 
+                                 alt="{{$student->first_name}}">
+                        </div>
+                        <div style="text-align: center; margin-top: 20px">
+                            <p style="color: aliceblue"><b >ID:</b> {{$student->id}}</p>
+                            <p style="color: aliceblue"><b>Name:</b> {{$student->first_name}} {{$student->last_name}}</p>
+                            <p style="color: aliceblue"><b>Grade:</b> {{$student->grade->grade_name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4" style="background-color:#374259;">
+                    <div class="card-header">
+                        <i class="fas fa-book-open me-1" style="color: aliceblue;"></i>
+                        <b style="color: aliceblue;">Subject Information</b>
+                    </div>
+                    <div class="card-body">
+                        @if ($student -> subjects -> isEmpty())
+                        <h3 class="text-center" style="color: white;">No Data!</h3>
+                        @else
+                            @foreach ($student -> subjects as $subject)
+                            <div style="margin-right: 10px;margin-bottom:10px; box-shadow:1px 1px 20px #111111; border-radius:20px">
+                                <a href="{{url('subjects/' . $subject -> id)}}" class="student-list text-decoration-none list-unstyled">
+                                    <div class="card-body">
+                                        <li class="list group-item ">{{$subject -> subject_name}}</li>
+                                    </div>
                                 </a>
-                                </div>
+                            </div>
                             @endforeach
-                         </div>
-                     </div>
-                 </div>
-             </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </x-layout>

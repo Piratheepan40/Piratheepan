@@ -11259,3 +11259,21 @@ body {
 .nav-link:hover{
   background-color: rgb(55, 58, 69);
 }
+
+.datatable-dropdown{
+  display: none;
+}
+
+.btn-primary
+{
+    background-color: #FF9D00;
+    border-color: #FF9D00;
+}
+.mt-4 {
+    color:#ff9d00 ;
+}
+
+
+
+
+
