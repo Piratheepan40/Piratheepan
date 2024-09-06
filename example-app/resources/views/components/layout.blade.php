@@ -58,7 +58,7 @@
             </div>
             <div id="layoutSidenav_content" style="background-color: #394046" >
             {{$slot}}
-            <footer class="py-4 text-white" style="background: #24272b;">
+            <footer class="py-4 custom-footer-bg mt-auto">
                 <div class="container-fluid px-4" >
                     <div class="d-flex align-items-center justify-content-between small">
                         <div class="text-muted">Copyright &copy; Chava Hindu 2024</div>
