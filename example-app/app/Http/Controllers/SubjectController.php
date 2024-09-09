@@ -26,7 +26,8 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
+        $subjects=Subject::pluck("id","subject_name");
+        return view("pages.subject.create",compact("subjects"));
     }
 
     /**
@@ -34,7 +35,13 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $subject=new Subject;
+        $subject->subject_name=$request->input("subject_name");
+        $subject->subject_order=$request->input("subject_order");
+        $subject->color=$request->input("color");
+        $subject->save();
+        return redirect ('subjects');   
     }
 
     /**
@@ -43,8 +50,8 @@ class SubjectController extends Controller
     public function show(string $id)
     {
         $subject = Subject::find($id);
-         $students =Subject::find($id)->students;
-        return view('pages.subject.show', compact('subject', 'students'));
+        //  $subject =Subject::find($id)->subjects;
+        return view('pages.subject.show', compact('subject'));
     }
 
     /**
@@ -52,7 +59,8 @@ class SubjectController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $subject=Subject::find($id);
+        return view('pages.subject.edit',compact('subject'));
     }
 
     /**
@@ -60,7 +68,12 @@ class SubjectController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $subject= Subject ::find($id);;
+        $subject->subject_name=$request->input("subject_name");
+        $subject->subject_order=$request->input("subject_order");
+        $subject->color=$request->input("color");
+        $subject->save();
+        return redirect ('subjects');  
     }
 
     /**
@@ -68,6 +81,8 @@ class SubjectController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $subject=Subject::find($id);
+        $subject->delete();
+        return redirect ('subjects');
     }
 }

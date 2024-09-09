@@ -1,5 +1,8 @@
 <x-layout>
     <h1 class="mt-4" style="color: orange; margin:20px">Student</h1>
+    <button>
+        <a href="/students/create">Student ADD</a>
+    </button>
     <div class="card mb-4" style="margin: 15px ;background-color: #222533" >
         <div class="card-header" style="color: #fff">
             <i class="bi bi-person-circle"></i>
@@ -14,6 +17,8 @@
                         <th>Last Name</th>
                         <th>Grade Name</th>
                         <th>Show</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -23,6 +28,8 @@
                         <th>Last Name</th>
                         <th>Grade Name</th>
                         <th>Show</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -37,6 +44,19 @@
                                 <i class="fa-solid fa-eye"></i> Show
                             </a>
                         </td>
+                        <td>
+                            <a href="{{ url("students/".$student->id.'/edit') }}" class="btn btn-sm btn-primary">
+                                <i class="fa-solid fa-eye"></i> Edit
+                            </a>
+                        </td>
+                        <td>
+                            <form action="/students/{{$student->id}}" method="POST">
+                                @method('delete')
+                                @csrf
+                                <input type="submit" value="DELETE" onclick="return confirm('Do You Want Delete?')">
+                            </form>
+                        </td>
+                       
                     </tr>
                     @endforeach
                 </tbody>
