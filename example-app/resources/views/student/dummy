@@ -1,0 +1,25 @@
+<x-layout>
+    <body class="sb-nav-fixed">
+        <x-nav/>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+               <x-sidebar/>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <form action="/students" method="POST">
+                        @csrf
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name">
+                        <label for="lastt_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name">
+                        <label for="grade_id">Grade Name</label>
+                        <input type="text" id="grade_id" name="grade_id">
+                        <input type="submit">
+                    </form>
+                </main>
+                <x-footer/>
+            </div>
+        </div>
+    </body>
+</x-layout> 
