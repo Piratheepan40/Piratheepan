@@ -56,7 +56,7 @@
                     
                 </nav>
             </div>
-            <div id="layoutSidenav_content" style="background-color: #394046" >
+            <div id="layoutSidenav_content" style="background-color: #252a2e" >
             {{$slot}}
             <footer class="py-4 custom-footer-bg mt-auto">
                 <div class="container-fluid px-4" >

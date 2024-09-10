@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="mt-4" style="color: orange; margin:20px">Student</h1>
     <div style="margin: 20px">
-        <a href="/students/create" style="display: inline-block; text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-align: center;">Add New Student</a>
+        <a href="/students/create" style="display: inline-block; text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 7px; font-weight: bold; text-align: center;">Add New Student</a>
     </div>
     
     <div class="card mb-4" style="margin: 15px ;background-color: #222533" >
@@ -42,7 +42,7 @@
                         <td>{{$student->grade->grade_name}}</td>
                         <td>
                             <a href="{{ url("/students/{$student->id}") }}" class="btn btn-sm btn-primary">
-                                <i class="fa-solid fa-eye"></i> Show
+                                <i class="fa-solid fa-eye"></i>
                             </a>
                         </td>
                         <td>
@@ -55,7 +55,9 @@
                             <form action="/students/{{$student->id}}" method="POST">
                                 @method('delete')
                                 @csrf
-                                <input type="submit" value="DELETE" onclick="return confirm('Do You Want Delete?')">
+                                <button type="submit" onclick="return confirm('Do You Want Delete?')" class="btn btn-sm btn-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </form>
                         </td>
                        

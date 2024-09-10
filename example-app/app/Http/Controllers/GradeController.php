@@ -55,12 +55,13 @@ class GradeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $grade = new Grade();
+        $grade = Grade::find($id);
         $grade -> grade_name = $request -> input('grade_name');
         $grade -> grade_group = $request -> input('grade_group');
         $grade -> grade_order = $request -> input('grade_order');
         $grade -> grade_color = $request -> input('grade_color');
         $grade -> save();
+        return redirect ('grades');   
     }
     /**
      * Remove the specified resource from storage.

@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="mt-4" style="margin: 20px">Grade</h1>
     <div style="margin: 20px">
-        <a href="/grades/create" style="display: inline-block; text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-align: center;">Add New Grade</a>
+        <a href="/grades/create" style="display: inline-block; text-decoration: none; color: white; background-color: #1f2c37; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-align: center;">Add New Grade</a>
     </div>
     <div class="card mb-4" style="margin: 15px ;background-color: #222533">
         <div class="card-header"  style="color: #fff">
@@ -32,21 +32,22 @@
                             <td>{{ $grade->grade_color }}</td>
                             
                             <td>
-                                <a href="{{ url('/grades/'.$grade->id) }}" class="btn btn-sm btn-primary">
-                                    <i class="fa-solid fa-eye"></i> Show
+                                <a href="{{ url('/grades/'.$grade->id) }}" class="btn btn-sm btn-info">
+                                    <i class="fa-solid fa-eye text-white"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ url("grades/".$grade->id.'/edit') }}" class="btn btn-sm btn-primary">
-                                    <i class="fa-solid fa-edit">Edit</i>
-                               
+                                <a href="{{ url("grades/".$grade->id.'/edit') }}" class="btn btn-sm btn-warning">
+                                    <i class="fa-solid fa-edit text-white"></i>
                                 </a>
                             </td>
                             <td>
                                 <form action="/grades/{{$grade->id}}" method="POST">
                                     @method('delete')
                                     @csrf
-                                    <input type="submit" value="DELETE" onclick="return confirm('Do You Want Delete?')">
+                                    <button type="submit" onclick="return confirm('Do You Want Delete?')" class="btn btn-sm btn-danger">
+                                        <i class="fa-solid fa-trash text-white"></i>
+                                    </button>
                                 </form>
                             </td>
                         </tr>

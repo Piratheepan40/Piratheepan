@@ -2,7 +2,7 @@
     <h1 class="mt-4" style="color: rgb(239, 239, 236); margin:20px">Subjects</h1>
     
     <div style="margin: 20px">
-        <a href="/subjects/create" style="display: inline-block; text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-align: center;">Add New Subject</a>
+        <a href="/subjects/create" style="display: inline-block; text-decoration: none; color: white; background-color: #182533; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-align: center;">Add New Subject</a>
     </div>
     
 
@@ -42,17 +42,24 @@
                             <td>{{ $subject->subject_order }}</td>
                             <td>{{ $subject->color }}</td>
                             <td>
-                                <a href="{{ url('subjects', $subject->id) }}" style="display: inline-block; text-decoration: none; color: white; background-color: #007bff; padding: 6px 12px; border-radius: 4px; text-align: center;">Show</a>
+                                <a href="{{ url('subjects', $subject->id) }}" class="btn btn-sm btn-primary">
+                                    <i class="fa-solid fa-eye text-white"></i>
+                                </a>
                             </td>
                             <td>
-                                <a href="{{ url('subjects/'.$subject->id.'/edit') }}" style="display: inline-block; text-decoration: none; color: white; background-color: #28a745; padding: 6px 12px; border-radius: 4px; text-align: center;">Edit</a>
+                                <a href="{{ url('subjects/'.$subject->id.'/edit') }}"class="btn btn-sm btn-info" >
+                                    <i class="fa-solid fa-edit text-white"></i>
+                                </a>
                             </td>
                             
                             <td>
                                 <form action="/subjects/{{$subject->id}}" method="POST" onsubmit="return confirm('Do You Want to Delete?')">
                                     @method('delete')
                                     @csrf
-                                    <input type="submit" value="DELETE">
+                                    <button type="submit" onclick="return confirm('Do You Want Delete?')" class="btn btn-sm btn-danger">
+                                        <i class="fa-solid fa-trash text-white"></i>
+                                    </button>
+                                    
                                 </form>
                             </td>
                         </tr>
