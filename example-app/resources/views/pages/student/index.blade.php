@@ -1,8 +1,9 @@
 <x-layout>
     <h1 class="mt-4" style="color: orange; margin:20px">Student</h1>
-    <button>
-        <a href="/students/create">Student ADD</a>
-    </button>
+    <div style="margin: 20px">
+        <a href="/students/create" style="display: inline-block; text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-align: center;">Add New Student</a>
+    </div>
+    
     <div class="card mb-4" style="margin: 15px ;background-color: #222533" >
         <div class="card-header" style="color: #fff">
             <i class="bi bi-person-circle"></i>
@@ -46,7 +47,8 @@
                         </td>
                         <td>
                             <a href="{{ url("students/".$student->id.'/edit') }}" class="btn btn-sm btn-primary">
-                                <i class="fa-solid fa-eye"></i> Edit
+                                <i class="fa-solid fa-edit">Edit</i>
+                           
                             </a>
                         </td>
                         <td>

@@ -26,7 +26,7 @@ class GradeController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -34,7 +34,7 @@ class GradeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
