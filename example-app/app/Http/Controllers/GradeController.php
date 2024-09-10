@@ -1,11 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\Subject;
 use App\Models\Grade;
 use App\Models\Student;
-use App\Models\Subject;
 class GradeController extends Controller
 {
     /**
@@ -13,62 +11,64 @@ class GradeController extends Controller
      */
     public function index()
     {
-        // $student_count = Student::all () ->count();
-        // $grade_count = Grade::all () ->count();
-        // $subject_count = Subject::all () ->count();
-
-        $grades = Grade::paginate(15);
-          return view('pages.grade.index', compact('grades'));
+        $grades = Grade::paginate(10);
+        return view('pages.grade.index',compact('grades'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        
+        return view('pages.grade.create');
     }
-
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        
+        $grade = new Grade();
+        $grade -> grade_name = $request -> input('grade_name');
+        $grade -> grade_group = $request -> input('grade_group');
+        $grade -> grade_order = $request -> input('grade_order');
+        $grade -> grade_color = $request -> input('grade_color');
+        $grade -> save();
+        return redirect('grades');
     }
-
     /**
      * Display the specified resource.
      */
     public function show(string $id)
     {
-          $grade=Grade::find($id);
-          $students=Grade::find($id)->students;
-          
-          return view('pages.grade.show',compact('grade','students',));
+        $grade = Grade::find($id);
+        return view ('pages.grade.show',compact('grade'));
     }
-
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        //
+        $grade = Grade::find($id);
+        return view('pages.grade.edit',compact('grade'));
     }
-
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        //
+        $grade = new Grade();
+        $grade -> grade_name = $request -> input('grade_name');
+        $grade -> grade_group = $request -> input('grade_group');
+        $grade -> grade_order = $request -> input('grade_order');
+        $grade -> grade_color = $request -> input('grade_color');
+        $grade -> save();
     }
-
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $grade = grade::find($id);
+        $grade -> delete();
+        return redirect('grades');
     }
 }
