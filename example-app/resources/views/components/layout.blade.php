@@ -14,8 +14,14 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <div ><img src="{{ Vite::asset('resources/image/OIP.jpeg') }}" alt="" style="width: 50px;height:50px"></div>
-            <a class="navbar-brand ps-3" href="/" style="pading:0"><b >Chava Hindu College</b></a>
+            <div>
+                <img src="{{ Vite::asset('resources/image/OIP.jpeg') }}" alt="Logo" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+            </div>
+            
+            <a class="navbar-brand ps-3" href="/" style="padding: 0; font-size: 20px; font-weight: bold;">
+                Chava Hindu College
+            </a>
+            
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -35,20 +41,22 @@
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link" href="/">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt" style="color: aliceblue;"></i></div>
-                                <b style="color: aliceblue;">Dashboard</b>
-                            </a>
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-tachometer-alt" style="color: aliceblue; font-size: 24px;"></i>
+                                </div>
+                                <b style="color: aliceblue; font-size: 20px;">Dashboard</b>
+                            </a><br><br>                            
                             <a class="nav-link" href="/students">
                                 <div class="sb-nav-link-icon"><i class="bi bi-person-circle" style="color: aliceblue;"></i></div>
-                                <b style="color: aliceblue;">Students</b>
-                            </a>
+                                <b style="color: aliceblue;font-size: 20px;">Students</b>
+                            </a><br><br>
                             <a class="nav-link" href="/grades">
                                 <div class="sb-nav-link-icon"><i class="bi bi-mortarboard" style="color: aliceblue;"></i></div>
-                                <b style="color: aliceblue;">Grades</b>
-                            </a>
+                                <b style="color: aliceblue;font-size: 20px;">Grades</b>
+                            </a><br><br>
                             <a class="nav-link" href="/subjects">
                                 <div class="sb-nav-link-icon"><i class="bi bi-book" style="color: aliceblue;"></i></div>
-                                <b style="color: aliceblue;">Subjects</b>
+                                <b style="color: aliceblue;font-size: 20px;">Subjects</b>
                             </a>
 
                         </div>

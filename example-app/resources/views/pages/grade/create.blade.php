@@ -23,13 +23,14 @@
                 <input type="number" id="grade_order" name="grade_order" class="form-control" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #495057; background-color: #495057; color: #f8f9fa;">
             </div>
 
-            <div style="margin-top: 20px;">
+            <div style="margin-bottom: 20px;">
                 <label for="grade_color" style="display: block; margin-bottom: 5px; font-weight: bold;">Grade Color</label>
-                <input type="text" id="grade_color" name="grade_color" class="form-control" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #495057; background-color: #495057; color: #f8f9fa;" value="#{{$grade->grade_color}}">
+                <input type="text" id="grade_color" name="grade_color" class="form-control" required style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #495057; background-color: #495057; color: #f8f9fa;">
             </div>
+            
 
             <div style="margin-top: 30px;">
-                <input type="submit" value="Add Grade" style="padding: 10px 20px; border-radius: 4px; border: none; background-color: #007bff; color: white; font-size: 16px; cursor: pointer;">
+                <input type="submit" value="Add Grade" style="padding: 10px 20px; border-radius: 4px; border: none; background-color: #122437; color: white; font-size: 16px; cursor: pointer;">
             </div>
         </form>
     </div>
