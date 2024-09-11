@@ -2,7 +2,7 @@
            <x-layout>
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4" style="color: orange">Dashboard</h1>
+                        <h1 class="mt-4" style="color: orange">CHC Dashbord</h1>
                         {{-- <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol> --}}
@@ -49,7 +49,7 @@
                                 <div class="card mb-4" style="color">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area me-1"style="color: aliceblue;"></i>
-                                        <b style="color: aliceblue;">Area Chart Example</b>
+                                        <b style="color: aliceblue;">Area Chart</b>
                                     </div>
                                     <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                                 </div>
@@ -58,7 +58,7 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar me-1"style="color: aliceblue;"></i>
-                                       <b style="color: aliceblue;"> Bar Chart Example</b>
+                                       <b style="color: aliceblue;"> Bar Chart</b>
                                     </div>
                                     <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>

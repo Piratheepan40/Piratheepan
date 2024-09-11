@@ -30,7 +30,7 @@ class StudentController extends Controller
     {
         $grades=Grade::pluck("grade_name","id");
         return view("pages.student.create",compact("grades"));
-        
+        return redirect ('students');  
     }
 
     /**
@@ -43,6 +43,7 @@ class StudentController extends Controller
         $student->last_name=$request->input("last_name");
         $student->grade_id=$request->input("grade_id");
         $student->save();
+        return redirect ('students');  
     }
 
     /**

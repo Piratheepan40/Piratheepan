@@ -2,7 +2,7 @@
     <h1 class="mt-4" style="color: rgb(239, 239, 236); margin:20px">Subjects</h1>
     
     <div style="margin: 20px">
-        <a href="/subjects/create" style="display: inline-block; text-decoration: none; color: white; background-color: #182533; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-align: center;">Add New Subject</a>
+        <a href="/subjects/create" style="display: inline-block; text-decoration: none; color: white; background-color: #233951; padding: 10px 20px; border-radius: 8px; font-weight: bold; text-align: center;">Add New Subject</a>
     </div>
     
 

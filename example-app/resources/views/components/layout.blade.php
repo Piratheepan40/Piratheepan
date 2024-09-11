@@ -42,20 +42,20 @@
                             <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link" href="/">
                                 <div class="sb-nav-link-icon">
-                                    <i class="fas fa-tachometer-alt" style="color: aliceblue; font-size: 24px;"></i>
+                                    <i class="fas fa-tachometer-alt" style="color: aliceblue; font-size: 18px;"></i>
                                 </div>
                                 <b style="color: aliceblue; font-size: 20px;">Dashboard</b>
-                            </a><br><br>                            
+                            </a><br><br>                        
                             <a class="nav-link" href="/students">
-                                <div class="sb-nav-link-icon"><i class="bi bi-person-circle" style="color: aliceblue;"></i></div>
+                                <div class="sb-nav-link-icon"><i class="bi bi-person-circle" style="color: aliceblue;font-size: 18px;"></i></div>
                                 <b style="color: aliceblue;font-size: 20px;">Students</b>
                             </a><br><br>
                             <a class="nav-link" href="/grades">
-                                <div class="sb-nav-link-icon"><i class="bi bi-mortarboard" style="color: aliceblue;"></i></div>
+                                <div class="sb-nav-link-icon"><i class="bi bi-mortarboard" style="color: aliceblue;font-size: 18px;"></i></div>
                                 <b style="color: aliceblue;font-size: 20px;">Grades</b>
                             </a><br><br>
                             <a class="nav-link" href="/subjects">
-                                <div class="sb-nav-link-icon"><i class="bi bi-book" style="color: aliceblue;"></i></div>
+                                <div class="sb-nav-link-icon"><i class="bi bi-book" style="color: aliceblue;font-size: 18px;"></i></div>
                                 <b style="color: aliceblue;font-size: 20px;">Subjects</b>
                             </a>
 

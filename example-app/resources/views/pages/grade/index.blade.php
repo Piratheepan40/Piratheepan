@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="mt-4" style="margin: 20px">Grade</h1>
     <div style="margin: 20px">
-        <a href="/grades/create" style="display: inline-block; text-decoration: none; color: white; background-color: #1f2c37; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-align: center;">Add New Grade</a>
+        <a href="/grades/create" style="display: inline-block; text-decoration: none; color: white; background-color: #355169; padding: 10px 20px; border-radius: 9px; font-weight: bold; text-align: center;">Add New Grade</a>
     </div>
     <div class="card mb-4" style="margin: 15px ;background-color: #222533">
         <div class="card-header"  style="color: #fff">

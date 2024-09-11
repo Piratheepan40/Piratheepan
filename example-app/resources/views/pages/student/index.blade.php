@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="mt-4" style="color: orange; margin:20px">Student</h1>
     <div style="margin: 20px">
-        <a href="/students/create" style="display: inline-block; text-decoration: none; color: white; background-color: #142436; padding: 10px 20px; border-radius: 7px; font-weight: bold; text-align: center;">Add New Student</a>
+        <a href="/students/create" style="display: inline-block; text-decoration: none; color: white; background-color: #17314d; padding: 10px 20px; border-radius: 10px; font-weight: bold; text-align: center;">Add New Student</a>
     </div>
     
     <div class="card mb-4" style="margin: 15px ;background-color: #222533" >
